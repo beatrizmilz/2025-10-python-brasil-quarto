@@ -8,7 +8,7 @@ O conceito de *literate programming*, ou programação letrada[^relatorios-1], f
 
 [^relatorios-1]: <https://www.ime.usp.br/~pf/CWEB/lit-prog.html>
 
-Com base nesse conceito, surgiram ferramentas que tornam possível criar relatórios reprodutíveis que combinam texto, código e resultados, como o R Markdown e, mais recentemente, o Quarto.
+Com base nesse conceito, surgiram ferramentas que tornam possível criar relatórios reprodutíveis que combinam texto, código e resultados, como o Jupyter Notebook, R Markdown e, mais recentemente, o Quarto.
 
 ## R Markdown
 
@@ -18,16 +18,51 @@ O [R Markdown](https://rmarkdown.rstudio.com/) é um pacote em R que possibilita
 
 Lançado em 2015, ele rapidamente se tornou uma das ferramentas mais populares para a criação de relatórios dinâmicos e reprodutíveis na comunidade R.
 
-O R Markdown possibilita exportar os arquivos em diversos formatos, como HTML, PDF, Word, apresentações, entre outros.
+O R Markdown foi um marco importante na criação de documentos técnicos reproduzíveis. Ele permite misturar texto e código em um único arquivo (`.Rmd`), gerando saídas em HTML, PDF, Word, entre outros formatos.
+
+No entanto, por ser um pacote da linguagem R, seu ecossistema se desenvolveu majoritariamente dentro dessa comunidade. Para pessoas que usam Python, e especialmente quem já trabalha em Jupyter, essa dependência tornava sua adoção menos natural.
 
 ## Quarto
 
 <img src="images/quarto.png" class="img-rstudio" align="right" width="200px"/>
 
-Como citado anteriormente, o R Markdown é uma ferramenta muito boa para escrita técnica e científica reprodutível, mas, por ser um pacote em R, **o seu uso acaba ficando limitado às pessoas que usam R**.
 
-Em 2022, a [Posit (anteriormente chamada de RStudio)](https://posit.co/) (mesma empresa responsável pelo RMarkdown) lançou o [Quarto](https://quarto.org/), uma nova ferramenta que permite a criação de documentos dinâmicos e reprodutíveis.
+Em 2022, a [Posit PBC (anteriormente chamada de RStudio)](https://posit.co/) (mesma empresa responsável pelo RMarkdown) lançou o [Quarto](https://quarto.org/), um sistema de escrita científica e técnica de uso multilíngue, concebido como uma evolução do R Markdown.
 
 O Quarto é um sistema de escrita técnica e científica, de código aberto. Ele é uma evolução do R Markdown, **mas não depende do R para funcionar**. Isso significa que você pode usar o Quarto para escrever documentos com códigos em Python, R, Julia, Observable, entre outras linguagens, e exportar para diversos formatos, como PDF, HTML, Word, entre outros. Por exemplo: Você pode usar o VSCode como IDE, escrever um documento com código em Python e gerar o documento final. Tudo isso sem precisar ter o R e/ou RStudio instalados.
 
+Em outras palavras, o Quarto traz para o ecossistema Python muitas das funcionalidades avançadas que a comunidade R já utilizava com o R Markdown, agora em uma ferramenta aberta, independente de linguagem e alinhada a práticas modernas de ciência aberta.
+
 [![Arte por Allison Horst.](images/quarto_schematic.png){out.width="50%" fig-align="center"}](https://allisonhorst.com/)
+
+## Por que usar Quarto em vez de apenas Jupyter?
+
+Embora o Jupyter Notebook seja amplamente utilizado no ecossistema Python pela sua interface interativa, ele possui limitações estruturais que impactam a reprodutibilidade. O Quarto tem o formato de arquivo baseado em texto simples (`.qmd`), que traz mais transparência e controle sobre o documento.
+
+
+Enquanto notebooks `.ipynb` são arquivos JSON estruturados, um documento `.qmd` é **texto puro**, o que traz vantagens práticas:
+
+- permite copiar/colar facilmente qualquer trecho (inclusive entre ChatGPT, e-mails, Markdown, etc.);  
+- edição é possível em qualquer editor (VS Code, Positron, RStudio, bloco de notas, etc.), sem interface gráfica;  
+- *diff* limpo no Git: é possível identificar exatamente o que mudou;  
+
+Outro ponto importante é que o Quarto promove boas práticas de reprodutibilidade que não são nativas do Jupyter. Para gerar o arquivo final, o Quarto **renderiza o documento do zero**, executando todo o código em sequência. Isso evita problemas comuns em notebooks, como células executadas fora de ordem ou dependência de estado pré-existente. Isso promove a reprodutibilidade, e garante que o documento final reflita fielmente o código escrito.
+ 
+
+## Exemplos de uso do Quarto
+
+<img src="images/cover-pandas-book.png" class="img-rstudio" align="right" width="200px"/>
+
+- Livro [Python for Data Analysis, 3E](https://wesmckinney.com/book/), de Wes McKinney (criador do pandas) e atualmente Principal Architect na [Posit PBC](https://posit.co/)
+
+
+- Livro [Geocomputation with Python](https://py.geocompx.org/), por Michael Dorman, Anita Graser, Jakub Nowosad e Robin Lovelace.
+
+
+- [Documentação da biblioteca Ibis](https://ibis-project.org/), uma biblioteca Python para análise de dados em larga escala.
+
+- [Modern Polars](https://kevinheavey.github.io/modern-polars/): uma comparação entre pandas e polars, de Kevin Heavey.
+
+- Slides da apresentação [Como acessar dados geoespaciais abertos do Brasil com geobr](https://beatrizmilz.github.io/2025-03-pyladies-odd-geobr/), que ocorreu em março de 2025 durante o evento da PyLadies São Paulo sobre o Open Data Day.
+
+- Mais exemplos na [galeria oficial do Quarto](https://quarto.org/docs/gallery/)
