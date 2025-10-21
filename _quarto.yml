@@ -1,0 +1,49 @@
+project:
+  type: book
+  output-dir: docs/
+
+book:
+  title: "Documentos reprodutíveis com Quarto"
+  site-url: "https://beatrizmilz.github.io/2025-10-python-brasil-quarto"
+  repo-url: "https://github.com/beatrizmilz/2025-10-python-brasil-quarto"
+  author: "Beatriz Milz"
+  date: "10/22/2025"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+lang: pt 
+language:
+  title-block-author-single: "Autoria"
+
+page-navigation: true
+
+page-footer: 
+  border: true
+  left: "Beatriz Milz, 2025" 
+  right: 
+    - icon: github
+      href: https://github.com/beatrizmilz/2025-10-python-brasil-quarto
+
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 5
+    link-external-icon: false
+    link-external-newwindow: true
+
+
+editor: source
+
+author:
+  - name: "Beatriz Milz"
+    url: "https://www.beamilz.com/"
+    email: milz.bea@gmail.com
+    orcid: 0000-0002-3064-4486
