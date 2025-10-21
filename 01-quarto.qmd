@@ -1,0 +1,33 @@
+
+# O que é o Quarto?
+## *Literate programming*
+
+<img src="images/literate-programming-book.jpg" class="img-rstudio" align="right" width="200px"/>
+
+O conceito de *literate programming*, ou programação letrada[^relatorios-1], foi criado por [Donald Knuth](https://www-cs-faculty.stanford.edu/~knuth/lp.html) na década de 80. Esse conceito propõe a escrita de códigos intercalados com texto explicativo, de forma que o fluxo de raciocínio fique claro para leitores e colaboradores. A ideia central é que o código seja parte da comunicação, tornando o relatório um documento legível tanto para computadores quanto para humanos.
+
+[^relatorios-1]: <https://www.ime.usp.br/~pf/CWEB/lit-prog.html>
+
+Com base nesse conceito, surgiram ferramentas que tornam possível criar relatórios reprodutíveis que combinam texto, código e resultados, como o R Markdown e, mais recentemente, o Quarto.
+
+## R Markdown
+
+<img src="images/hex-rmarkdown.png" class="img-rstudio" align="right" width="120px"/>
+
+O [R Markdown](https://rmarkdown.rstudio.com/) é um pacote em R que possibilita criar arquivos com códigos em R, resultados dos códigos, e textos explicativos. Esses arquivos tem extensão `.Rmd`.
+
+Lançado em 2015, ele rapidamente se tornou uma das ferramentas mais populares para a criação de relatórios dinâmicos e reprodutíveis na comunidade R.
+
+O R Markdown possibilita exportar os arquivos em diversos formatos, como HTML, PDF, Word, apresentações, entre outros.
+
+## Quarto
+
+<img src="images/quarto.png" class="img-rstudio" align="right" width="200px"/>
+
+Como citado anteriormente, o R Markdown é uma ferramenta muito boa para escrita técnica e científica reprodutível, mas, por ser um pacote em R, **o seu uso acaba ficando limitado às pessoas que usam R**.
+
+Em 2022, a [Posit (anteriormente chamada de RStudio)](https://posit.co/) (mesma empresa responsável pelo RMarkdown) lançou o [Quarto](https://quarto.org/), uma nova ferramenta que permite a criação de documentos dinâmicos e reprodutíveis.
+
+O Quarto é um sistema de escrita técnica e científica, de código aberto. Ele é uma evolução do R Markdown, **mas não depende do R para funcionar**. Isso significa que você pode usar o Quarto para escrever documentos com códigos em Python, R, Julia, Observable, entre outras linguagens, e exportar para diversos formatos, como PDF, HTML, Word, entre outros. Por exemplo: Você pode usar o VSCode como IDE, escrever um documento com código em Python e gerar o documento final. Tudo isso sem precisar ter o R e/ou RStudio instalados.
+
+[![Arte por Allison Horst.](images/quarto_schematic.png){out.width="50%" fig-align="center"}](https://allisonhorst.com/)
