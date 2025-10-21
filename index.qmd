@@ -1,5 +1,62 @@
-# Preface {.unnumbered}
+---
+title: 'Documentos reprodutíveis com Quarto'
+---
 
-This is a Quarto book.
+## Introdução {.unnumbered}
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+<img src="images/quarto.png" align="right" width="120px" class = "img-rstudio">
+
+Este site apresenta o material de apoio para o workshop **"Documentos reprodutíveis com Quarto"**, oferecido durante a [Python Brasil 2025](https://2025.pythonbrasil.org.br/), em outubro de 2025.
+
+## Resumo da atividade {.unnumbered}
+
+Neste tutorial, conheceremos o Quarto ([quarto.org](https://quarto.org)), uma ferramenta Open Source para escrita e publicação técnica e científica. Recomendado para pessoas que utilizam Python para análise de dados.
+
+O Quarto é uma ferramenta open source para escrita e publicação técnica e científica, que unifica geração de documentos, sites, blogs e apresentações a partir de fontes em Markdown e Jupyter. Neste tutorial prático, dirigido a pessoas que usam Python para análise de dados, serão apresentados os principais recursos do Quarto: instalação; criação de arquivos `.qmd`; configuração de metadados (YAML) para controle de output; renderização para HTML, PDF e slides Reveal.js; e publicação estática via GitHub Pages.
+
+### Conhecimentos prévios {.unnumbered}
+
+**Quais conhecimentos prévios são necessários para que seja possível acompanhar bem a sua atividade?**
+
+É recomendável que os participantes já tenham experiência com Jupyter Notebooks. Ter uma conta no GitHub e conhecimentos básicos de criação e interação com repositórios também ajuda a acompanhar a publicação do material via GitHub Pages.
+
+### Objetivos de aprendizagem {.unnumbered}
+**O que as pessoas que participarem podem esperar aprender na sua atividade?**
+
+Os participantes poderão esperar aprender, de forma prática e progressiva:
+
+- O que é Quarto e para que serve em projetos de dados
+
+- Como instalar o Quarto CLI
+
+- Como iniciar um projeto Quarto e criar documentos .qmd
+
+- Como configurar metadados (YAML) para controlar formatos de saída
+
+- Como renderizar arquivos em HTML, PDF, Word, slides Reveal.js, livros, blogs e outros formatos suportados
+
+- Como estruturar sites e blogs estáticos com Quarto
+
+- Como publicar conteúdo online usando GitHub Pages
+
+
+
+## Ministrante {.unnumbered}
+
+**Beatriz Milz** <br>
+*Pesquisadora Colaboradora | Estágio pós-doutoral* <br>
+[Laboratório de Planejamento Territorial (LaPlan)](https://laplan.pesquisa.ufabc.edu.br/) - Universidade Federal do ABC (UFABC) <br>
+[Email](mailto:milz.bea@gmail.com) | [Website](https://beamilz.com) | [GitHub](https://github.com/beatrizmilz) | [LinkedIn](https://www.linkedin.com/in/beatrizmilz/) |
+[ResearchGate](https://www.researchgate.net/profile/Beatriz-Milz) | [Currículo Lattes](http://lattes.cnpq.br/5150665880581477) | [Orcid](https://orcid.org/0000-0002-3064-4486)
+
+
+
+## Sobre este material {.unnumbered}
+
+<!-- ### Contribuidores -->
+
+<!-- Além da equipe do curso, esse material recebeu contribuições de: -->
+
+### Licença {.unnumbered}
+
+Esse material está disponível sob a [licença CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
